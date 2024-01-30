@@ -4,4 +4,4 @@ WORKDIR /var/www/html
 COPY ./ ./
 RUN rm -rf .git/*
 RUN rm -rf .github/*
-EXSPOSE 80
+EXPOSE 80
