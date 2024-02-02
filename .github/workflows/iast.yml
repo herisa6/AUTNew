@@ -28,6 +28,12 @@ jobs:
 
       - name: Check AUT URL
         run: curl ${{ env.URL }}
+
+      - name: ZAP Scan
+        uses: hermanka/action-full-scan@master
+        with:
+          target: ${{ env.URL }}
+          network_name: isolated
               
       - name: stop docker
         run: docker stop docker-apache  
